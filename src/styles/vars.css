@@ -1,0 +1,361 @@
+:root {
+  /* Surface tint */
+  --md-sys-color-surface-tint: var(--md-sys-color-primary);
+  /* Surface tint color */
+  --md-sys-color-surface-tint-color: var(--md-sys-color-primary);
+  /* On error container */
+  --md-sys-color-on-error-container: var(--md-ref-palette-error10);
+  /* On error */
+  --md-sys-color-on-error: var(--md-ref-palette-error100);
+  /* Error container */
+  --md-sys-color-error-container: var(--md-ref-palette-error90);
+  /* On tertiary container */
+  --md-sys-color-on-tertiary-container: var(--md-ref-palette-tertiary10);
+  /* On tertiary */
+  --md-sys-color-on-tertiary: var(--md-ref-palette-tertiary100);
+  /* Tertiary container */
+  --md-sys-color-tertiary-container: var(--md-ref-palette-tertiary90);
+  /* Tertiary */
+  --md-sys-color-tertiary: var(--md-ref-palette-tertiary40);
+  /* Shadow */
+  --md-sys-color-shadow: var(--md-ref-palette-neutral0);
+  /* Error */
+  --md-sys-color-error: var(--md-ref-palette-error40);
+  /* Outline */
+  --md-sys-color-outline: var(--md-ref-palette-neutral-variant50);
+  /* On background */
+  --md-sys-color-on-background: var(--md-ref-palette-neutral10);
+  /* Background */
+  --md-sys-color-background: var(--md-ref-palette-neutral99);
+  /* Inverse on surface */
+  --md-sys-color-inverse-on-surface: var(--md-ref-palette-neutral95);
+  /* Inverse surface */
+  --md-sys-color-inverse-surface: var(--md-ref-palette-neutral20);
+  /* On surface variant */
+  --md-sys-color-on-surface-variant: var(--md-ref-palette-neutral-variant30);
+  /* On surface */
+  --md-sys-color-on-surface: var(--md-ref-palette-neutral10);
+  /* Surface Variant */
+  --md-sys-color-surface-variant: var(--md-ref-palette-neutral-variant90);
+  /* Surface */
+  --md-sys-color-surface: var(--md-ref-palette-neutral99);
+  /* On secondary container */
+  --md-sys-color-on-secondary-container: var(--md-ref-palette-secondary10);
+  /* On secondary */
+  --md-sys-color-on-secondary: var(--md-ref-palette-secondary100);
+  /* Secondary container */
+  --md-sys-color-secondary-container: var(--md-ref-palette-secondary90);
+  /* Secondary */
+  --md-sys-color-secondary: var(--md-ref-palette-secondary40);
+  /* Inverse primary */
+  --md-sys-color-inverse-primary: var(--md-ref-palette-primary80);
+  /* On primary container */
+  --md-sys-color-on-primary-container: var(--md-ref-palette-primary10);
+  /* On primary */
+  --md-sys-color-on-primary: var(--md-ref-palette-primary100);
+  /* Primary container */
+  --md-sys-color-primary-container: var(--md-ref-palette-primary90);
+  /* Primary */
+  --md-sys-color-primary: var(--md-ref-palette-primary40);
+  --md-sys-color-surface-container: var(--md-ref-palette-neutral94);
+  /* Surface container highest */
+  --md-sys-color-surface-container-highest: var(--md-ref-palette-neutral90);
+  /* Surface container low */
+  --md-sys-color-surface-container-low: var(--md-ref-palette-neutral96);
+  /* Outline variant */
+  --md-sys-color-outline-variant: var(--md-ref-palette-neutral-variant80);
+
+  /* Error 0 */
+  --md-ref-palette-error0: #000000ff;
+  /* Error 10 */
+  --md-ref-palette-error10: #410e0bff;
+  /* Error 20 */
+  --md-ref-palette-error20: #601410ff;
+  /* Error 30 */
+  --md-ref-palette-error30: #8c1d18ff;
+  /* Error 40 */
+  --md-ref-palette-error40: #b3261eff;
+  /* Error 50 */
+  --md-ref-palette-error50: #dc362eff;
+  /* Error 60 */
+  --md-ref-palette-error60: #e46962ff;
+  /* Error 70 */
+  --md-ref-palette-error70: #ec928eff;
+  /* Error 80 */
+  --md-ref-palette-error80: #f2b8b5ff;
+  /* Error 90 */
+  --md-ref-palette-error90: #f9dedcff;
+  /* Error 95 */
+  --md-ref-palette-error95: #fceeeeff;
+  /* Error 99 */
+  --md-ref-palette-error99: #fffbf9ff;
+  /* Error 100 */
+  --md-ref-palette-error100: #ffffffff;
+  /* Tertiary 0 */
+  --md-ref-palette-tertiary0: #000000ff;
+  /* Tertiary 10 */
+  --md-ref-palette-tertiary10: #31111dff;
+  /* Tertiary 20 */
+  --md-ref-palette-tertiary20: #492532ff;
+  /* Tertiary 30 */
+  --md-ref-palette-tertiary30: #633b48ff;
+  /* Tertiary 40 */
+  --md-ref-palette-tertiary40: #7d5260ff;
+  /* Tertiary 50 */
+  --md-ref-palette-tertiary50: #986977ff;
+  /* Tertiary 60 */
+  --md-ref-palette-tertiary60: #b58392ff;
+  /* Tertiary 70 */
+  --md-ref-palette-tertiary70: #d29dacff;
+  /* Tertiary 80 */
+  --md-ref-palette-tertiary80: #efb8c8ff;
+  /* Tertiary 90 */
+  --md-ref-palette-tertiary90: #ffd8e4ff;
+  /* Tertiary 95 */
+  --md-ref-palette-tertiary95: #ffecf1ff;
+  /* Tertiary 99 */
+  --md-ref-palette-tertiary99: #fffbfaff;
+  /* Tertiary 100 */
+  --md-ref-palette-tertiary100: #ffffffff;
+  /* Secondary 0 */
+  --md-ref-palette-secondary0: #000000ff;
+  /* Secondary 10 */
+  --md-ref-palette-secondary10: #1d192bff;
+  /* Secondary 20 */
+  --md-ref-palette-secondary20: #332d41ff;
+  /* Secondary 30 */
+  --md-ref-palette-secondary30: #4a4458ff;
+  /* Secondary 40 */
+  --md-ref-palette-secondary40: #625b71ff;
+  /* Secondary 50 */
+  --md-ref-palette-secondary50: #7a7289ff;
+  /* Secondary 60 */
+  --md-ref-palette-secondary60: #958da5ff;
+  /* Secondary 70 */
+  --md-ref-palette-secondary70: #b0a7c0ff;
+  /* Secondary 80 */
+  --md-ref-palette-secondary80: #ccc2dcff;
+  /* Secondary 90 */
+  --md-ref-palette-secondary90: #e8def8ff;
+  /* Secondary 95 */
+  --md-ref-palette-secondary95: #f6edffff;
+  /* Secondary 99 */
+  --md-ref-palette-secondary99: #fffbfeff;
+  /* Secondary 100 */
+  --md-ref-palette-secondary100: #ffffffff;
+  /* Primary 0 */
+  --md-ref-palette-primary0: #000000ff;
+  /* Primary 10 */
+  --md-ref-palette-primary10: #21005dff;
+  /* Primary 20 */
+  --md-ref-palette-primary20: #381e72ff;
+  /* Primary 30 */
+  --md-ref-palette-primary30: #4f378bff;
+  /* Primary 40 */
+  --md-ref-palette-primary40: #6750a4ff;
+  /* Primary 50 */
+  --md-ref-palette-primary50: #7f67beff;
+  /* Primary 60 */
+  --md-ref-palette-primary60: #9a82dbff;
+  /* Primary 70 */
+  --md-ref-palette-primary70: #b69df8ff;
+  /* Primary 80 */
+  --md-ref-palette-primary80: #d0bcffff;
+  /* Primary 90 */
+  --md-ref-palette-primary90: #eaddffff;
+  /* Primary 95 */
+  --md-ref-palette-primary95: #f6edffff;
+  /* Primary 99 */
+  --md-ref-palette-primary99: #fffbfeff;
+  /* Primary 100 */
+  --md-ref-palette-primary100: #ffffffff;
+  /* Neutral Variant 0 */
+  --md-ref-palette-neutral-variant0: #000000ff;
+  /* Neutral Variant 10 */
+  --md-ref-palette-neutral-variant10: #1d1a22ff;
+  /* Neutral Variant 20 */
+  --md-ref-palette-neutral-variant20: #322f37ff;
+  /* Neutral Variant 30 */
+  --md-ref-palette-neutral-variant30: #49454fff;
+  /* Neutral Variant 40 */
+  --md-ref-palette-neutral-variant40: #605d66ff;
+  /* Neutral Variant 50 */
+  --md-ref-palette-neutral-variant50: #79747eff;
+  /* Neutral Variant 60 */
+  --md-ref-palette-neutral-variant60: #938f99ff;
+  /* Neutral Variant 70 */
+  --md-ref-palette-neutral-variant70: #aea9b4ff;
+  /* Neutral Variant 80 */
+  --md-ref-palette-neutral-variant80: #cac4d0ff;
+  /* Neutral Variant 90 */
+  --md-ref-palette-neutral-variant90: #e7e0ecff;
+  /* Neutral Variant 95 */
+  --md-ref-palette-neutral-variant95: #f5eefaff;
+  /* Neutral Variant 99 */
+  --md-ref-palette-neutral-variant99: #fffbfeff;
+  /* Neutral Variant 100 */
+  --md-ref-palette-neutral-variant100: #ffffffff;
+  /* Neutral 0 */
+  --md-ref-palette-neutral0: #000000ff;
+  /* Neutral 10 */
+  --md-ref-palette-neutral10: #1c1b1fff;
+  /* Neutral 15 */
+  --md-ref-palette-neutral15: #26252aff;
+  /* Neutral 20 */
+  --md-ref-palette-neutral20: #313033ff;
+  /* Neutral 30 */
+  --md-ref-palette-neutral30: #484649ff;
+  /* Neutral 40 */
+  --md-ref-palette-neutral40: #605d62ff;
+  /* Neutral 50 */
+  --md-ref-palette-neutral50: #787579ff;
+  /* Neutral 60 */
+  --md-ref-palette-neutral60: #939094ff;
+  /* Neutral 70 */
+  --md-ref-palette-neutral70: #aeaaaeff;
+  /* Neutral 80 */
+  --md-ref-palette-neutral80: #c9c5caff;
+  /* Neutral 90 */
+  --md-ref-palette-neutral90: #e6e0e9ff;
+  /* Neutral 94 */
+  --md-ref-palette-neutral94: #f3edf7ff;
+  /* Neutral 95 */
+  --md-ref-palette-neutral95: #f4eff4ff;
+  /* Neutral 96 */
+  --md-ref-palette-neutral96: #f7f2f7ff;
+  /* Neutral 99 */
+  --md-ref-palette-neutral99: #fffbfeff;
+  /* Neutral 100 */
+  --md-ref-palette-neutral100: #ffffffff;
+  /* Black */
+  --md-ref-palette-black: #000000ff;
+  /* White */
+  --md-ref-palette-white: #ffffffff;
+
+  /* Plain typeface */
+  --md-ref-typeface-plain: Roboto;
+  /* Brand typeface */
+  --md-ref-typeface-brand: Roboto;
+  /* Bold weight */
+  --md-ref-typeface-weight-bold: 700;
+  /* Medium weight */
+  --md-ref-typeface-weight-medium: 500;
+  /* Regular weight */
+  --md-ref-typeface-weight-regular: 400;
+
+  /* Elevation */
+  --md-sys-elevation-shadow-key-umbra-color: rgba(0, 0, 0, 0.2);
+  --md-sys-elevation-shadow-key-penumbra-color: rgba(0, 0, 0, 0.14);
+  --md-sys-elevation-shadow-ambient-umbra-color: rgba(0, 0, 0, 0.12);
+
+  /* Material Design Animation Curves */
+  /* Expressive Spatial */
+  --motion-easing-expressive-fast-spatial: cubic-bezier(0.42, 1.67, 0.21, 0.90);
+  --motion-duration-expressive-fast-spatial: 350ms;
+  --motion-easing-expressive-default-spatial: cubic-bezier(0.38, 1.21, 0.22, 1.00);
+  --motion-duration-expressive-default-spatial: 500ms;
+  --motion-easing-expressive-slow-spatial: cubic-bezier(0.39, 1.29, 0.35, 0.98);
+  --motion-duration-expressive-slow-spatial: 650ms;
+  
+  /* Expressive Effects */
+  --motion-easing-expressive-fast-effects: cubic-bezier(0.31, 0.94, 0.34, 1.00);
+  --motion-duration-expressive-fast-effects: 150ms;
+  --motion-easing-expressive-default-effects: cubic-bezier(0.34, 0.80, 0.34, 1.00);
+  --motion-duration-expressive-default-effects: 200ms;
+  --motion-easing-expressive-slow-effects: cubic-bezier(0.34, 0.88, 0.34, 1.00);
+  --motion-duration-expressive-slow-effects: 300ms;
+
+  /* Shape */
+  --md-sys-shape-corner-extra-small-decreased: 2px;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-large-increased: 20px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-extra-large-increased: 30px;
+  --md-sys-shape-corner-extra-large-increased-2: 48px;
+  --md-sys-shape-corner-extra-large-increased-3: 68px;
+  --md-sys-shape-corner-full: 1000px;
+
+  /* Dragged state layer opacity */
+  --md-sys-state-dragged-state-layer-opacity: 0.1599999964237213;
+  /* Pressed state layer opacity */
+  --md-sys-state-pressed-state-layer-opacity: 0.11999999731779099;
+  /* Focus state layer opacity */
+  --md-sys-state-focus-state-layer-opacity: 0.11999999731779099;
+  /* Hover state layer opacity */
+  --md-sys-state-hover-state-layer-opacity: 0.07999999821186066;
+
+  /* Spacing */
+  --md-sys-spacing-extra-small: 4px;
+  --md-sys-spacing-small: 8px;
+  --md-sys-spacing-medium: 16px;
+  --md-sys-spacing-large: 24px;
+  --md-sys-spacing-extra-large: 32px;
+}
+
+.dark {
+  /* Surface tint */
+  --md-sys-color-surface-tint: var(--md-sys-color-primary);
+  /* Surface tint color */
+  --md-sys-color-surface-tint-color: var(--md-sys-color-primary);
+  /* On error container */
+  --md-sys-color-on-error-container: var(--md-ref-palette-error80);
+  /* On error */
+  --md-sys-color-on-error: var(--md-ref-palette-error20);
+  /* Error container */
+  --md-sys-color-error-container: var(--md-ref-palette-error30);
+  /* On tertiary container */
+  --md-sys-color-on-tertiary-container: var(--md-ref-palette-tertiary90);
+  /* On tertiary */
+  --md-sys-color-on-tertiary: var(--md-ref-palette-tertiary20);
+  /* Tertiary container */
+  --md-sys-color-tertiary-container: var(--md-ref-palette-tertiary30);
+  /* Tertiary */
+  --md-sys-color-tertiary: var(--md-ref-palette-tertiary80);
+  /* Shadow */
+  --md-sys-color-shadow: var(--md-ref-palette-neutral0);
+  /* Error */
+  --md-sys-color-error: var(--md-ref-palette-error80);
+  /* Outline */
+  --md-sys-color-outline: var(--md-ref-palette-neutral-variant60);
+  /* On background */
+  --md-sys-color-on-background: var(--md-ref-palette-neutral90);
+  /* Background */
+  --md-sys-color-background: var(--md-ref-palette-neutral10);
+  /* Inverse on surface */
+  --md-sys-color-inverse-on-surface: var(--md-ref-palette-neutral20);
+  /* Inverse surface */
+  --md-sys-color-inverse-surface: var(--md-ref-palette-neutral90);
+  /* On surface variant */
+  --md-sys-color-on-surface-variant: var(--md-ref-palette-neutral-variant80);
+  /* On surface */
+  --md-sys-color-on-surface: var(--md-ref-palette-neutral90);
+  /* Surface Variant */
+  --md-sys-color-surface-variant: var(--md-ref-palette-neutral-variant30);
+  /* Surface */
+  --md-sys-color-surface: var(--md-ref-palette-neutral10);
+  /* On secondary container */
+  --md-sys-color-on-secondary-container: var(--md-ref-palette-secondary90);
+  /* On secondary */
+  --md-sys-color-on-secondary: var(--md-ref-palette-secondary20);
+  /* Secondary container */
+  --md-sys-color-secondary-container: var(--md-ref-palette-secondary30);
+  /* Secondary */
+  --md-sys-color-secondary: var(--md-ref-palette-secondary80);
+  /* Inverse primary */
+  --md-sys-color-inverse-primary: var(--md-ref-palette-primary40);
+  /* On primary container */
+  --md-sys-color-on-primary-container: var(--md-ref-palette-primary90);
+  /* On primary */
+  --md-sys-color-on-primary: var(--md-ref-palette-primary20);
+  /* Primary container */
+  --md-sys-color-primary-container: var(--md-ref-palette-primary30);
+  /* Primary */
+  --md-sys-color-primary: var(--md-ref-palette-primary80);
+  /* Surface container low */
+  --md-sys-color-surface-container-low: var(--md-ref-palette-neutral15);
+  /* Outline variant */
+  --md-sys-color-outline-variant: var(--md-ref-palette-neutral-variant30);
+}
