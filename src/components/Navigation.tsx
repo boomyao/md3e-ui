@@ -12,6 +12,7 @@ const navigationItems: NavigationItem[] = [
   { name: 'Badge', path: '/badge', category: 'MDUI' },
   { name: 'Button', path: '/button', category: 'MDUI' },
   { name: 'Checkbox', path: '/checkbox', category: 'MDUI' },
+  { name: 'Slider', path: '/slider', category: 'MDUI' },
   { name: 'Switch', path: '/switch', category: 'MDUI' },
   { name: 'TextField', path: '/text-field', category: 'MDUI' },
   { name: 'Tooltip', path: '/tooltip', category: 'MDUI' },

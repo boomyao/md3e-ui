@@ -8,6 +8,7 @@ import { CheckboxDemo } from './components/demos/CheckboxDemo'
 import { TextFieldDemo } from './components/demos/TextFieldDemo'
 import BadgeDemo from './components/demos/BadgeDemo'
 import TooltipDemo from './components/demos/TooltipDemo'
+import SliderDemo from './components/demos/SliderDemo'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/text-field" element={<TextFieldDemo />} />
           <Route path="/badge" element={<BadgeDemo />} />
           <Route path="/tooltip" element={<TooltipDemo />} />
+          <Route path="/slider" element={<SliderDemo />} />
         </Routes>
       </main>
     </div>
