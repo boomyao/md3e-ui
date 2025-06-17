@@ -1,0 +1,13 @@
+# Progress Design Specs
+
+## Variable Thickness
+
+Default thickness is 4dp, and the thickness can be adjusted by any number.
+
+## Anatomy
+
+- Active indicator
+  - Fill color: md.sys.color.primary
+- Track
+  - Fill color: md.sys.color.secondary-container
+

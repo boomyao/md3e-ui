@@ -1,4 +1,4 @@
-# Development Specs
+# Development Guide
 
 ## Project Introduction
 
@@ -7,16 +7,16 @@ The goal of this project is to create a set of components that are consistent wi
 ## Work Advice
 
 - Only edit the target file, don't edit or create other files.
-- Just read the specs that have been provided, don't read the others by yourself.
+- Just read the information that have been provided, don't read the others by yourself, this is very important!
 - Utils have been provided and installed, don't need to read them again.
 
 ## Component Advice
 
-- Almost all the components are base on the @radix-ui.
+- Almost all the components are base on the @radix-ui, but you should deep consider whether to use the @radix-ui or not.
+- If user provide the props, you should strictly follow the props, and don't add other props.
 - Use styles whenever possible instead of using JavaScript code.
 - Classnames are declared by class-variance-authority, and separated from the component.
-- Almost all the components have same states: enabled, disabled, hovered, focused, pressed, error.
-- First try to use the tailwindcss variants, such as hovered - hover, focused - focus-visible, pressed - active, error - user-invalid etc. And use the data-*, not,has, [svg] etc. to implement the state and interaction of the component.
+- If the component has states, try to use the tailwindcss variants, such as hovered - hover, focused - focus-visible, pressed - active, error - user-invalid etc. And use the data-*, not,has, [svg] etc. to implement the state and interaction of the component.
 
 ## Utils
 

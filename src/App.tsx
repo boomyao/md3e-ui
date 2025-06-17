@@ -9,6 +9,7 @@ import { TextFieldDemo } from './components/demos/TextFieldDemo'
 import BadgeDemo from './components/demos/BadgeDemo'
 import TooltipDemo from './components/demos/TooltipDemo'
 import SliderDemo from './components/demos/SliderDemo'
+import ProgressDemo from './components/demos/ProgressDemo'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/badge" element={<BadgeDemo />} />
           <Route path="/tooltip" element={<TooltipDemo />} />
           <Route path="/slider" element={<SliderDemo />} />
+          <Route path="/progress" element={<ProgressDemo />} />
         </Routes>
       </main>
     </div>

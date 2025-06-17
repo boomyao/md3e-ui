@@ -1,0 +1,55 @@
+# Wavy Linear Progress Guidelines
+
+1. Basic Geometric Shapes  
+The whole consists of two parts:  
+- Wavy line: represents the completed portion  
+- Straight line: represents the incomplete portion  
+The two lines are complementary, with a fixed gap at the progress boundary, and the endpoints of the lines are rounded.
+
+2. Wave Effect  
+Sine wave function:  
+y(x, t) = centerY + amplitude × sin(2π × x / wavelength + phase(t))
+
+3. Dynamic Updates and Animation  
+The wavy line flows to the right.
+
+# Linear Progress with Wavy - Development Guidelines
+
+## Props
+
+- `value`: number, the value of the progress, range is 0-100.
+- `thickness`: number, the thickness of the progress, default is 4dp.
+- `width`: number, the width of the progress, if not provided, the progress will be 100%.
+
+## Implementation
+- Use svg to draw the progress, svg width = props.width, height = props.thickness + amplitude * 2.
+- The svg viewBox is -thickness/2 0 svgWidth + thickness svgHeight, because the stroke width is thickness.
+- The gap between the progress and the stop indicator is static gap + thickness, because the stroke width.
+- Make sure the animation state is not affected by the props change.
+- Not use cva to generate the class name, because not variant is needed.
+- If not provided width, provide a empty div with width 100% and update currentWidth when the div is mounted.
+
+# Progress Linear Design Specs
+
+## Anatomy
+
+- Active indicator
+  - Fill color: md.sys.color.primary
+- Track
+  - Fill color: md.sys.color.secondary-container
+- Stop indicator
+  - Fill color: md.sys.color.primary
+  - At the end of the progress bar
+  - Radius: 2dp
+
+## Size
+
+- Min width: 40dp
+- Progress horizontal padding: 4dp
+
+## Animation
+
+- The wave length is 40dp.
+- The amplitude is 3dp.
+- The stop radius is 2dp.
+- The gap is 4dp.
