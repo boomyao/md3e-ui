@@ -29,8 +29,8 @@ The goal of this project is to create a set of components that are consistent wi
 
 - theme variables
   - path: src/index.css
-- custom tailwind utilities
-  path: src/styles/utilities.css
+- custom tailwind classes
+  path: src/styles/classes.css
 
 ## ComponentCode Style Advice
 

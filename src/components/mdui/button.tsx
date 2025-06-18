@@ -8,13 +8,13 @@ const buttonVariants = cva(
   [
     // Base styles
     "relative inline-flex items-center justify-center whitespace-nowrap",
-    "transition-all motion-fast-spatial",
+    "transition-expressive-spatial-fast",
     "focus-visible:outline-none focus-visible:ring-0",
     "disabled:pointer-events-none",
     "overflow-hidden",
     // State layer with :before pseudo-element
     "before:absolute before:inset-0 before:rounded-[inherit] before:opacity-0",
-    "before:transition-opacity before:motion-fast-spatial",
+    "before:transition-opacity before:transition-expressive-spatial-fast",
     "hover:before:opacity-[0.08] focus-visible:before:opacity-[0.1] active:before:opacity-[0.1]",
   ],
   {

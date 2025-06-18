@@ -10,6 +10,7 @@ import BadgeDemo from './components/demos/BadgeDemo'
 import TooltipDemo from './components/demos/TooltipDemo'
 import SliderDemo from './components/demos/SliderDemo'
 import ProgressDemo from './components/demos/ProgressDemo'
+import { DialogDemo } from './components/demos/DialogDemo'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/tooltip" element={<TooltipDemo />} />
           <Route path="/slider" element={<SliderDemo />} />
           <Route path="/progress" element={<ProgressDemo />} />
+          <Route path="/dialog" element={<DialogDemo />} />
         </Routes>
       </main>
     </div>

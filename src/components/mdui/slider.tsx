@@ -131,7 +131,7 @@ const handleVariants = cva(
 
 // Value Indicator Variants
 const valueIndicatorVariants = cva(
-  "absolute bottom-full mb-1 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-full label-large whitespace-nowrap transform -translate-x-[calc(50%-4px)] transition-opacity motion-fast-effects",
+  "absolute bottom-full mb-1 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-full label-large whitespace-nowrap transform -translate-x-[calc(50%-4px)] transition-opacity transition-expressive-effects-fast",
   {
     variants: {
       visible: {

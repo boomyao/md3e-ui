@@ -1,0 +1,103 @@
+# Dialog Design Guidelines
+
+## Anatomy
+
+- Dialog
+- Scrim
+- Container
+- Headline
+- Content
+- Actions
+  - Buttons: reuse the button component with variant="text"
+
+## Styles
+
+### Container
+
+- Background: md.sys.color.surface-container-high
+- Shape: md.sys.shape.corner.extra-large
+- Elevation: md.sys.elevation.level3
+- Min Width: 280dp
+- Max Width: 560dp
+- Padding: 24dp
+
+### Scrim
+
+- Background: md.sys.color.shadow
+- Opacity: 0.32
+
+### Headline
+
+- Typography: md.sys.typography.headline-small
+- Color: md.sys.color.on-surface
+
+## Open Animation - Dialog
+Y 轴下滑进入
+- keyframes: translateY: -50dp -> 0dp
+- duration: 200ms
+- easing: easing.emphasized
+
+## Open Animation - Scrim
+淡入
+- keyframes: opacity: 0 -> 1
+- duration: 500ms
+- easing: easing.linear
+
+## Open Animation - Container
+1. 淡入
+- keyframes: opacity: 0 -> 1
+- duration: 50ms
+- easing: easing.linear
+
+2. 高度增长
+- keyframes: height:35% -> 100%
+- duration: 500ms
+- easing: easing.emphasized
+
+## Open Animation - Headline, Content
+淡入
+- keyframes: opacity: 0 -> 1
+- duration: 250ms
+- easing: easing.linear
+
+## Open Animation - Actions
+淡入
+- keyframes: opacity: 0 -> 1
+- duration: 300ms
+- easing: easing.linear
+
+## Close Animation - Dialog
+Y 轴上滑消失
+- keyframes: translateY: 0dp -> -50dp
+- duration: 150ms
+- easing: easing.emphasized_accelerate
+
+## Close Animation - Scrim
+淡出
+- keyframes: opacity: 0.32 -> 0
+- duration: 150ms
+- easing: easing.linear
+
+## Close Animation - Container
+1. 高度缩减
+- keyframes: height: 100% -> 35%
+- duration: 150ms
+- easing: easing.emphasized_accelerate
+
+2. 淡出
+- keyframes: opacity: 1 -> 0
+- delay: 150ms
+- duration: 50ms
+- easing: easing.linear
+
+## Close Animation - Headline, Content
+淡出
+- keyframes: opacity: 1 -> 0
+- duration: 100ms
+- easing: easing.linear
+
+## Close Animation - Actions
+淡出
+- keyframes: opacity: 1 -> 0
+- duration: 100ms
+- easing: easing.linear

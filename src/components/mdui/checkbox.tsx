@@ -11,14 +11,14 @@ const checkboxVariants = cva(
     "relative inline-flex items-center justify-center",
     "size-[18px] shrink-0",
     "rounded-extra-small-decreased",
-    "transition-all motion-fast-spatial",
+    "transition-all transition-expressive-spatial-fast",
     "focus-visible:outline-none focus-visible:ring-0",
     "disabled:pointer-events-none",
     
     // State layer - 10x = 40px
     "before:absolute before:inset-0 before:size-10 before:-translate-x-1/2 before:-translate-y-1/2",
     "before:left-1/2 before:top-1/2 before:rounded-full",
-    "before:transition-all before:motion-fast-spatial before:opacity-0",
+    "before:transition-all before:transition-expressive-spatial-fast before:opacity-0",
     
     // Default unselected state
     "bg-transparent border-[0.5px] border-on-surface-variant",
@@ -54,7 +54,7 @@ const checkboxVariants = cva(
 const checkboxIconVariants = cva(
   [
     "size-[18px]",
-    "transition-colors motion-fast-spatial",
+    "transition-colors transition-expressive-spatial-fast",
     // Default icon color
     "text-on-primary",
     "group-has-[+input:user-invalid]:text-on-error",

@@ -7,7 +7,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const switchVariants = cva([
-  "peer inline-flex h-[32px] w-[52px] shrink-0 cursor-pointer items-center rounded-full border-2 transition-colors motion-fast-spatial",
+  "peer inline-flex h-[32px] w-[52px] shrink-0 cursor-pointer items-center rounded-full border-2 transition-colors transition-expressive-spatial-fast",
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
   // Enabled-Unchecked
   "border-outline bg-surface-container-highest",
@@ -22,7 +22,7 @@ const switchVariants = cva([
 ]);
 
 const thumbVariants = cva([
-  "pointer-events-none relative block rounded-full ring-0 transition-all motion-fast-spatial",
+  "pointer-events-none relative block rounded-full ring-0 transition-all transition-expressive-spatial-fast",
   // Base (Unchecked)
   "h-4 w-4 translate-x-[4px] bg-outline",
   // Unchecked with Icon (`has` selector)
@@ -44,7 +44,7 @@ const thumbVariants = cva([
   "data-[disabled]:data-[state=checked]:bg-surface data-[disabled]:data-[state=checked]:opacity-100",
   "data-[disabled]:data-[state=unchecked]:bg-on-surface data-[disabled]:data-[state=unchecked]:opacity-38",
   // State Layer
-  "before:content-[''] before:absolute before:z-[-1] before:w-10 before:h-10 before:rounded-full before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:transition-all before:motion-fast-effects",
+  "before:content-[''] before:absolute before:z-[-1] before:w-10 before:h-10 before:rounded-full before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:transition-all before:transition-expressive-effects-fast",
   "group-hover/switch:data-[state=unchecked]:before:bg-on-surface/8",
   "group-focus-visible/switch:data-[state=unchecked]:before:bg-on-surface/8",
   "group-active/switch:data-[state=unchecked]:before:bg-on-surface/8",

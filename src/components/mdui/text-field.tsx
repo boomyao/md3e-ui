@@ -11,7 +11,7 @@ const textFieldVariants = cva(
     "items-center",
     "gap-4",
     "transition-all",
-    "motion-fast-spatial",
+    "transition-expressive-spatial-fast",
   ],
   {
     variants: {

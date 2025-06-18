@@ -1,0 +1,10 @@
+@utility transition-expressive-* {
+  transition-property: all;
+  transition-timing-function: --value(--ease-expressive-*, [*]);
+  transition-duration: --value(--duration-expressive-*, [*]);
+}
+
+@utility animate-motion-expressive-* {
+  animation-timing-function: --value(--ease-expressive-*, [*]);
+  animation-duration: --value(--duration-expressive-*, [*]);
+}

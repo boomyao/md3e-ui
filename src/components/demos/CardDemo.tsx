@@ -28,7 +28,7 @@ const Button = ({
   variant?: "filled" | "outlined"; 
   className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
-  const baseClasses = "h-10 px-4 rounded-full label-large motion-fast-effects";
+  const baseClasses = "h-10 px-4 rounded-full label-large transition-expressive-effects-fast";
   const variantClasses = {
     filled: "bg-primary text-on-primary hover:shadow-md",
     outlined: "border border-outline text-on-surface-variant hover:bg-on-surface/8"
@@ -53,7 +53,7 @@ const IconButton = ({
   className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
   <button 
-    className={`w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-on-surface/8 motion-fast-effects ${className}`}
+    className={`w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-on-surface/8 transition-expressive-effects-fast ${className}`}
     {...props}
   >
     {children}

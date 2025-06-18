@@ -1,0 +1,38 @@
+@theme inline {
+  --animate-dialog-scrim-in: dialog-scrim-fade-in var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-emphasized);
+  --animate-dialog-scrim-out: dialog-scrim-fade-out var(--md-sys-motion-duration-short1) var(--md-sys-motion-easing-emphasized) forwards;
+  --animate-dialog-container-in: dialog-slide-down var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized), dialog-container-in-opacity var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized), dialog-container-in-height var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized);
+}
+
+@keyframes dialog-slide-down {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes dialog-slide-up {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-50px); }
+}
+
+@keyframes dialog-scrim-fade-in {
+  from { opacity: 0; }
+  to { opacity: 0.32; }
+}
+@keyframes dialog-scrim-fade-out {
+  from { opacity: 0.32; }
+  to { opacity: 0; }
+}
+
+@keyframes dialog-container-in-opacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes dialog-container-in-height {
+  from { clip-path: inset(0 0 65% 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes dialog-container-out-opacity {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

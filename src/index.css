@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "./styles/vars.css";
-@import "./styles/utilities.css";
+@import "./styles/typography.css";
+@import "./styles/motion.css";
+@import "./styles/components.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -66,3 +68,4 @@
   --radius-extra-large-increased-3: var(--md-sys-shape-corner-extra-large-increased-3);
   --radius-full: var(--md-sys-shape-corner-full);
 }
+
