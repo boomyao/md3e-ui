@@ -1,0 +1,69 @@
+# Lists Design Guidelines
+
+## Anatomy
+
+Container
+  - StateLayer
+Content
+  - Headline
+  - Supporting text (optional)
+Leading Element (optional)
+Trailing Element (optional)
+
+## Styles
+
+### Enabled
+- Container
+  BackgroundColor: md.sys.color.surface
+  SelectedBackgroundColor: md.sys.color.secondary-container
+  Shape: md.sys.shape.corner.none
+  Elevation: md.sys.elevation.level0
+  LeadingSpacing: 16px
+  TrailingSpacing: 16px
+  VerticalSpacing: 8px
+    - with the lines of supporting text >= 2: 12px
+- Headline
+  Color: md.sys.color.on-surface
+  SelectedColor: md.sys.color.on-secondary-container
+  Typography: md.ref.typeface.body-large
+- SupportingText
+  Color: md.sys.color.on-surface-variant
+  SelectedColor: md.sys.color.on-surface
+  Typography: md.ref.typeface.body-medium
+- LeadingElement
+  TrailingSpacing: 16px
+  VerticalAlignment: center
+    - with 3 lines of supporting text: start
+- TrailingElement
+  LeadingSpacing: 16px
+  VerticalAlignment: center
+    - with the lines of supporting text >= 2: start
+
+## Disabled
+- Headline
+  Color: md.sys.color.on-surface
+  Opacity: 0.38
+- SupportingText
+  Color: md.sys.color.on-surface
+  Opacity: 0.38
+
+## Hovered
+- Headline
+  Color: md.sys.color.on-surface
+- SupportingText
+  Color: md.sys.color.on-secondary-container
+- StateLayer
+  BackgroundColor: md.sys.color.on-surface
+  Opacity: 0.08
+  SelectedBackgroundColor: md.sys.color.on-surface
+  SelectedOpacity: 0.08
+
+## Pressed
+- StateLayer
+  Opacity: 0.1
+
+## Dragged
+- Container
+  Elevation: md.sys.elevation.level4
+- StateLayer
+  Opacity: 0.16
