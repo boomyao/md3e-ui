@@ -1,0 +1,67 @@
+# Menu Design Guidelines
+
+## Anatomy
+
+Container
+  - StateLayer
+ListItem
+  - Content
+    - Headline
+    - Supporting text (optional)
+Leading Element (optional)
+Trailing Element (optional)
+Divider (optional): reuse Divider component
+
+## Styles
+
+### Enabled
+- Container
+  BackgroundColor: md.sys.color.surface-container
+  SelectedBackgroundColor: md.sys.color.secondary-container
+  Shape: md.sys.shape.corner.extra-small
+  Elevation: md.sys.elevation.level2
+  LeadingSpacing: 12dp
+  TrailingSpacing: 12dp
+  VerticalSpacing: 8dp
+- ListItem
+  MinHeight: 48dp
+- Headline
+  Color: md.sys.color.on-surface
+  SelectedColor: md.sys.color.on-secondary-container
+  Typography: md.ref.typeface.body-large
+- SupportingText
+  Color: md.sys.color.on-surface-variant
+  SelectedColor: md.sys.color.on-surface
+  Typography: md.ref.typeface.body-medium
+- LeadingElement
+  TrailingSpacing: 12dp
+  VerticalAlignment: center
+- TrailingElement
+  LeadingSpacing: 12dp
+  VerticalAlignment: center
+- Divider
+  VerticalSpacing: 8dp
+
+## Disabled
+- Headline
+  Color: md.sys.color.on-surface
+  Opacity: 0.38
+- SupportingText
+  Color: md.sys.color.on-surface
+  Opacity: 0.38
+
+## Hovered
+- Headline
+  Color: md.sys.color.on-surface
+- SupportingText
+  Color: md.sys.color.on-secondary-container
+- StateLayer
+  BackgroundColor: md.sys.color.on-surface
+  Opacity: 0.08
+  SelectedBackgroundColor: md.sys.color.on-surface
+  SelectedOpacity: 0.08
+
+## Pressed
+- StateLayer
+  Opacity: 0.1
+

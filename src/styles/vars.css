@@ -38,7 +38,7 @@
   /* Surface Variant */
   --md-sys-color-surface-variant: var(--md-ref-palette-neutral-variant90);
   /* Surface */
-  --md-sys-color-surface: var(--md-ref-palette-neutral99);
+  --md-sys-color-surface: var(--md-ref-palette-neutral98);
   /* On secondary container */
   --md-sys-color-on-secondary-container: var(--md-ref-palette-secondary10);
   /* On secondary */
@@ -197,6 +197,8 @@
   --md-ref-palette-neutral-variant100: #ffffffff;
   /* Neutral 0 */
   --md-ref-palette-neutral0: #000000ff;
+  /* Neutral 6 */
+  --md-ref-palette-neutral6: #141218ff;
   /* Neutral 10 */
   --md-ref-palette-neutral10: #1c1b1fff;
   /* Neutral 15 */
@@ -223,6 +225,8 @@
   --md-ref-palette-neutral95: #f4eff4ff;
   /* Neutral 96 */
   --md-ref-palette-neutral96: #f7f2f7ff;
+  /* Neutral 98 */
+  --md-ref-palette-neutral98: #fef7ffff;
   /* Neutral 99 */
   --md-ref-palette-neutral99: #fffbfeff;
   /* Neutral 100 */
@@ -357,7 +361,7 @@
   /* On surface variant */
   --md-sys-color-on-surface-variant: var(--md-ref-palette-neutral-variant80);
   /* On surface */
-  --md-sys-color-on-surface: var(--md-ref-palette-neutral90);
+  --md-sys-color-on-surface: var(--md-ref-palette-neutral6);
   /* Surface Variant */
   --md-sys-color-surface-variant: var(--md-ref-palette-neutral-variant30);
   /* Surface */

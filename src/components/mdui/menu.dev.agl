@@ -1,0 +1,16 @@
+# Menu Development Guidelines
+
+## Components
+
+Menu,
+MenuContent,
+MenuGroup,
+MenuItem,
+MenuLabel,
+MenuPortal,
+MenuSeparator,
+MenuShortcut,
+MenuSub,
+MenuSubContent,
+MenuSubTrigger,
+MenuTrigger

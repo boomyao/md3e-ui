@@ -68,7 +68,6 @@ const listItemContentVariants = cva(
     "flex-1",
     "flex-col",
     "justify-center",
-    "gap-1",
     "min-w-0",
   ]
 )

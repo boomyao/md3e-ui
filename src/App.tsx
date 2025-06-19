@@ -12,6 +12,7 @@ import SliderDemo from './components/demos/SliderDemo'
 import ProgressDemo from './components/demos/ProgressDemo'
 import { DialogDemo } from './components/demos/DialogDemo'
 import ListsDemo from './components/demos/ListsDemo'
+import MenuDemo from './components/demos/MenuDemo'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/progress" element={<ProgressDemo />} />
           <Route path="/dialog" element={<DialogDemo />} />
           <Route path="/lists" element={<ListsDemo />} />
+          <Route path="/menu" element={<MenuDemo />} />
         </Routes>
       </main>
     </div>
