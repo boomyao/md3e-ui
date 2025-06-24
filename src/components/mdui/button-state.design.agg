@@ -1,0 +1,190 @@
+# Button State Design
+
+// --- 1. CONSTANTS DEFINITION ---
+
+// Color Tokens (M3 = Material 3)
+DEFINE COLOR_PRIMARY_CONTAINER   = "M3/sys/light/primary-container"   // Not used here, but good practice
+DEFINE COLOR_ON_PRIMARY_CONTAINER = "M3/sys/light/on-primary-container" // Not used here, but good practice
+DEFINE COLOR_SECONDARY           = "M3/sys/light/secondary"
+DEFINE COLOR_ON_SECONDARY         = "M3/sys/light/on-secondary"
+DEFINE COLOR_SECONDARY_CONTAINER   = "M3/sys/light/secondary-container"
+DEFINE COLOR_ON_SECONDARY_CONTAINER = "M3/sys/light/on-secondary-container"
+DEFINE COLOR_ON_SURFACE           = "M3/sys/light/on-surface"
+
+// State Layer Color Tokens (Color + Opacity)
+DEFINE STATE_LAYER_ON_SECONDARY_HOVER   = "M3/state-layers/light/onSecondary/opacity-0.08"
+DEFINE STATE_LAYER_ON_SECONDARY_FOCUS   = "M3/state-layers/light/onSecondary/opacity-0.10"
+DEFINE STATE_LAYER_ON_SECONDARY_PRESSED = "M3/state-layers/light/onSecondary/opacity-0.08" // Note: Pressed and Hover have same opacity overlay
+DEFINE STATE_LAYER_ON_SECONDARY_RIPPLE  = "M3/state-layers/light/onSecondary/opacity-0.10"
+
+DEFINE STATE_LAYER_ON_SEC_CONTAINER_HOVER   = "M3/state-layers/light/onSecondaryContainer/opacity-0.08"
+DEFINE STATE_LAYER_ON_SEC_CONTAINER_FOCUS   = "M3/state-layers/light/onSecondaryContainer/opacity-0.10"
+DEFINE STATE_LAYER_ON_SEC_CONTAINER_PRESSED = "M3/state-layers/light/onSecondaryContainer/opacity-0.08"
+DEFINE STATE_LAYER_ON_SEC_CONTAINER_RIPPLE  = "M3/state-layers/light/onSecondaryContainer/opacity-0.10"
+
+DEFINE STATE_LAYER_DISABLED_CONTAINER = "M3/state-layers/light/onSurface/opacity-0.10"
+
+DEFINE DISABLED_CONTENT_OPACITY = 0.38
+
+// --- 2. VARIABLES & ENUMS DEFINITION ---
+
+// Enums for Component Variants
+DEFINE ENUM SelectedState = {TRUE, FALSE}
+DEFINE ENUM InteractionState = {ENABLED, HOVERED, FOCUSED, PRESSED, DISABLED}
+
+// Variables to hold the current state of a button instance
+VAR currentSelectedState: SelectedState
+VAR currentInteractionState: InteractionState
+
+// --- 3. STYLE LOOKUP MAP DEFINITION ---
+
+// A structure to hold the style properties for any given state
+STRUCTURE StyleConfig {
+  containerFill: String,
+  containerCornerRadius: Number,
+  contentColor: String,
+  stateLayerFill: String,  // This will be NULL if no state layer is needed
+  showFocusIndicator: Boolean,
+  showRipple: Boolean
+}
+
+// The main lookup table
+DEFINE ButtonStyleMap = MAP {
+  FALSE: MAP { // When Selected = FALSE
+    ENABLED:  StyleConfig(
+                containerFill: COLOR_SECONDARY_CONTAINER,
+                containerCornerRadius: 8,
+                contentColor: COLOR_ON_SECONDARY_CONTAINER,
+                stateLayerFill: NULL,
+                showFocusIndicator: FALSE,
+                showRipple: FALSE
+              ),
+    HOVERED:  StyleConfig(
+                containerFill: COLOR_SECONDARY_CONTAINER,
+                containerCornerRadius: 12, // Original data shows 12, may be a design choice
+                contentColor: COLOR_ON_SECONDARY_CONTAINER,
+                stateLayerFill: STATE_LAYER_ON_SEC_CONTAINER_HOVER,
+                showFocusIndicator: FALSE,
+                showRipple: FALSE
+              ),
+    FOCUSED:  StyleConfig(
+                containerFill: COLOR_SECONDARY_CONTAINER,
+                containerCornerRadius: 12,
+                contentColor: COLOR_ON_SECONDARY_CONTAINER,
+                stateLayerFill: STATE_LAYER_ON_SEC_CONTAINER_FOCUS,
+                showFocusIndicator: TRUE,
+                showRipple: FALSE
+              ),
+    PRESSED:  StyleConfig(
+                containerFill: COLOR_SECONDARY_CONTAINER,
+                containerCornerRadius: 12,
+                contentColor: COLOR_ON_SECONDARY_CONTAINER,
+                stateLayerFill: STATE_LAYER_ON_SEC_CONTAINER_PRESSED,
+                showFocusIndicator: FALSE,
+                showRipple: TRUE
+              ),
+    DISABLED: StyleConfig(
+                containerFill: STATE_LAYER_DISABLED_CONTAINER,
+                containerCornerRadius: 8,
+                contentColor: COLOR_ON_SURFACE,
+                stateLayerFill: NULL,
+                showFocusIndicator: FALSE,
+                showRipple: FALSE
+              )
+  },
+  TRUE: MAP { // When Selected = TRUE
+    ENABLED:  StyleConfig(
+                containerFill: COLOR_SECONDARY,
+                containerCornerRadius: 24,
+                contentColor: COLOR_ON_SECONDARY,
+                stateLayerFill: NULL,
+                showFocusIndicator: FALSE,
+                showRipple: FALSE
+              ),
+    HOVERED:  StyleConfig(
+                containerFill: COLOR_SECONDARY,
+                containerCornerRadius: 24,
+                contentColor: COLOR_ON_SECONDARY,
+                stateLayerFill: STATE_LAYER_ON_SECONDARY_HOVER,
+                showFocusIndicator: FALSE,
+                showRipple: FALSE
+              ),
+    FOCUSED:  StyleConfig(
+                containerFill: COLOR_SECONDARY,
+                containerCornerRadius: 24,
+                contentColor: COLOR_ON_SECONDARY,
+                stateLayerFill: STATE_LAYER_ON_SECONDARY_FOCUS,
+                showFocusIndicator: TRUE,
+                showRipple: FALSE
+              ),
+    PRESSED:  StyleConfig(
+                containerFill: COLOR_SECONDARY,
+                containerCornerRadius: 24,
+                contentColor: COLOR_ON_SECONDARY,
+                stateLayerFill: STATE_LAYER_ON_SECONDARY_PRESSED,
+                showFocusIndicator: FALSE,
+                showRipple: TRUE
+              ),
+    DISABLED: StyleConfig(
+                containerFill: STATE_LAYER_DISABLED_CONTAINER,
+                containerCornerRadius: 24,
+                contentColor: COLOR_ON_SURFACE,
+                stateLayerFill: STATE_LAYER_DISABLED_CONTAINER, // In data, this state also has a fill on state-layer
+                showFocusIndicator: FALSE,
+                showRipple: FALSE
+              )
+  }
+}
+
+// --- 4. LOGIC TO GENERATE/RENDER ALL COMPONENT VARIANTS ---
+
+FUNCTION BuildButtonComponent(isSelected, state):
+
+  // 1. Get the specific style configuration from the Map
+  LET currentStyle = ButtonStyleMap[isSelected][state]
+
+  // 2. Start defining the component
+  DEFINE COMPONENT `Selected=${isSelected}, State=${state}`:
+
+    // 3. Apply container styles
+    SET Container.fill = currentStyle.containerFill
+    SET Container.cornerRadius = currentStyle.containerCornerRadius
+    // ... set other static container properties like layoutMode, itemSpacing etc.
+
+    // 4. Define the State Layer which holds the content
+    CREATE StateLayer:
+      // Apply state layer overlay fill if it exists
+      IF currentStyle.stateLayerFill IS NOT NULL:
+        SET StateLayer.fill = currentStyle.stateLayerFill
+      END IF
+
+      // Handle the special opacity for the Disabled state's content
+      IF state == DISABLED:
+        SET StateLayer.opacity = DISABLED_CONTENT_OPACITY
+      END IF
+
+    IF currentStyle.showFocusIndicator:
+      CREATE FocusIndicator:
+        SET FocusIndicator.stroke = COLOR_SECONDARY
+        // Corner radius of focus indicator is slightly larger than the container
+        SET FocusIndicator.cornerRadius = currentStyle.containerCornerRadius + 2 
+    END IF
+
+    IF currentStyle.showRipple:
+      CREATE Ripple:
+        IF isSelected == TRUE:
+          SET Ripple.fill = STATE_LAYER_ON_SECONDARY_RIPPLE
+        ELSE:
+          SET Ripple.fill = STATE_LAYER_ON_SEC_CONTAINER_RIPPLE
+        END IF
+    END IF
+  
+  END DEFINE
+
+// --- Main Execution: Loop to create all variants ---
+FOR EACH sel_option IN SelectedState:
+  FOR EACH state_option IN InteractionState:
+    // Call the builder function for each combination
+    BuildButtonComponent(sel_option, state_option)
+  END FOR
+END FOR

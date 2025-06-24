@@ -13,6 +13,8 @@ import ProgressDemo from './components/demos/ProgressDemo'
 import { DialogDemo } from './components/demos/DialogDemo'
 import ListsDemo from './components/demos/ListsDemo'
 import MenuDemo from './components/demos/MenuDemo'
+import { CalendarDemo } from './components/demos/CalendarDemo'
+import MenuButtonDemo from './components/demos/MenuButtonDemo'
 
 function App() {
 
@@ -27,6 +29,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/switch" element={<SwitchDemo />} />
           <Route path="/button" element={<ButtonDemo />} />
+          <Route path="/calendar" element={<CalendarDemo />} />
           <Route path="/checkbox" element={<CheckboxDemo />} />
           <Route path="/text-field" element={<TextFieldDemo />} />
           <Route path="/badge" element={<BadgeDemo />} />
@@ -36,6 +39,7 @@ function App() {
           <Route path="/dialog" element={<DialogDemo />} />
           <Route path="/lists" element={<ListsDemo />} />
           <Route path="/menu" element={<MenuDemo />} />
+          <Route path="/menu-button" element={<MenuButtonDemo />} />
         </Routes>
       </main>
     </div>

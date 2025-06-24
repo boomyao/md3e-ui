@@ -60,6 +60,7 @@
   --md-sys-color-surface-container: var(--md-ref-palette-neutral94);
   /* Surface container highest */
   --md-sys-color-surface-container-highest: var(--md-ref-palette-neutral90);
+  --md-sys-color-surface-container-high: var(--md-ref-palette-neutral92);
   /* Surface container low */
   --md-sys-color-surface-container-low: var(--md-ref-palette-neutral96);
   /* Outline variant */
@@ -219,6 +220,8 @@
   --md-ref-palette-neutral80: #c9c5caff;
   /* Neutral 90 */
   --md-ref-palette-neutral90: #e6e0e9ff;
+  /* Neutral 92 */
+  --md-ref-palette-neutral92: #ece6f0ff;
   /* Neutral 94 */
   --md-ref-palette-neutral94: #f3edf7ff;
   /* Neutral 95 */

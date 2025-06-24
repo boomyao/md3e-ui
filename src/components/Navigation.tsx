@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 
@@ -11,10 +10,12 @@ interface NavigationItem {
 const navigationItems: NavigationItem[] = [
   { name: 'Badge', path: '/badge', category: 'MDUI' },
   { name: 'Button', path: '/button', category: 'MDUI' },
+  { name: 'Calendar', path: '/calendar', category: 'MDUI' },
   { name: 'Checkbox', path: '/checkbox', category: 'MDUI' },
   { name: 'Dialog', path: '/dialog', category: 'MDUI' },
   { name: 'Lists', path: '/lists', category: 'MDUI' },
   { name: 'Menu', path: '/menu', category: 'MDUI' },
+  { name: 'Menu Button', path: '/menu-button', category: 'MDUI' },
   { name: 'Progress', path: '/progress', category: 'MDUI' },
   { name: 'Slider', path: '/slider', category: 'MDUI' },
   { name: 'Switch', path: '/switch', category: 'MDUI' },

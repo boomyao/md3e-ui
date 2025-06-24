@@ -27,10 +27,43 @@ The goal of this project is to create a set of components that are consistent wi
 
 ## Tailwind
 
-- theme variables
-  - path: src/index.css
+- theme color variants
+such as: bg-primary, bg-on-surface-variant ...
+
+- typography classnames
+such as: body-large, title-small, title-medium ...
+
+- shape variants
+such as: rounded-extra-small, rounded-small, rounded-medium, rounded-large, rounded-extra-large ...
+
+- shadow variants
+such as: shadow-elevation-0, shadow-elevation-1, shadow-elevation-2 ...
+
+## Icon
+
+path: src/components/mdui/icons
+
+```
+// such as arrow_drop_down
+
+import { ArrowDropDownIcon } from '@/components/mdui/icons'
+```
+
+## Internal Components
+
+If exist completed components, you can use them directly.
+
+```
+// such as
+
+import { Button } from './button'
+```
+
+
 
 ## ComponentCode Style Advice
+
+if no variant, generate classnames on the component.
 
 ``` tsx
 // cva code, Recommend to more code.

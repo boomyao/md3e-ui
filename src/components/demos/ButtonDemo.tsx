@@ -1,5 +1,7 @@
 import React from 'react'
 import { Button } from '@/components/mdui/button'
+import { IconButton } from '@/components/mdui/icon-button'
+import { StarsIcon } from '@/components/mdui/icons'
 
 export function ButtonDemo() {
   return (
@@ -22,14 +24,6 @@ export function ButtonDemo() {
             </Button>
           </div>
         </div>
-        <div className="bg-surface border border-outline rounded p-4">
-          <pre className="text-sm overflow-x-auto">
-{`<Button>Default Button</Button>
-<Button onClick={() => alert('Button clicked')}>
-  Click Me
-</Button>`}
-          </pre>
-        </div>
       </section>
 
       {/* Button Variants */}
@@ -46,16 +40,6 @@ export function ButtonDemo() {
             <Button shape="square">Square</Button>
           </div>
         </div>
-        <div className="bg-surface border border-outline rounded p-4">
-          <pre className="text-sm overflow-x-auto">
-{`<Button variant="default">Default</Button>
-<Button variant="destructive">Destructive</Button>
-<Button variant="outline">Outline</Button>
-<Button variant="secondary">Secondary</Button>
-<Button variant="ghost">Ghost</Button>
-<Button variant="link">Link</Button>`}
-          </pre>
-        </div>
       </section>
 
       {/* Button Sizes */}
@@ -70,16 +54,6 @@ export function ButtonDemo() {
             <Button size="xl">XLarge</Button>
           </div>
         </div>
-        <div className="bg-surface border border-outline rounded p-4">
-          <pre className="text-sm overflow-x-auto">
-{`<Button size="sm">Small</Button>
-<Button size="default">Default</Button>
-<Button size="lg">Large</Button>
-<Button size="icon">
-  <IconComponent />
-</Button>`}
-          </pre>
-        </div>
       </section>
 
       {/* Disabled State */}
@@ -92,14 +66,6 @@ export function ButtonDemo() {
             <Button variant="elevated" disabled>Disabled Secondary</Button>
             <Button variant="text" disabled>Disabled Ghost</Button>
           </div>
-        </div>
-        <div className="bg-surface border border-outline rounded p-4">
-          <pre className="text-sm overflow-x-auto">
-{`<Button disabled>Disabled Button</Button>
-<Button variant="outline" disabled>Disabled Outline</Button>
-<Button variant="secondary" disabled>Disabled Secondary</Button>
-<Button variant="ghost" disabled>Disabled Ghost</Button>`}
-          </pre>
         </div>
       </section>
 
@@ -128,87 +94,46 @@ export function ButtonDemo() {
             </Button>
           </div>
         </div>
-        <div className="bg-surface border border-outline rounded p-4">
-          <pre className="text-sm overflow-x-auto">
-{`<Button>
-  <PlusIcon className="w-4 h-4 mr-2" />
-  Add Project
-</Button>
-
-<Button variant="outline">
-  <HeartIcon className="w-4 h-4 mr-2" />
-  Favorite
-</Button>
-
-<Button variant="secondary">
-  Download
-  <DownloadIcon className="w-4 h-4 ml-2" />
-</Button>`}
-          </pre>
-        </div>
       </section>
 
-      {/* Custom Styles */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Custom Styles</h2>
+      <section>
+        <h2 className="text-2xl font-semibold">Icon Button</h2>
         <div className="bg-surface-variant rounded-lg p-6">
-          <div className="flex flex-wrap gap-4">
-            <Button className="bg-purple-600 hover:bg-purple-700">
-              Custom Color
-            </Button>
-            <Button className="rounded-full px-6">
-              Round Button
-            </Button>
-            <Button className="w-full max-w-xs">
-              Full Width Button
-            </Button>
+          <div className="flex flex-wrap items-center gap-4">
+            {['xs', 'sm', 'md', 'lg', 'xl'].map((size) => (
+              <IconButton key={size} size={size as any} widthType="narrow" variant="filled">
+                <StarsIcon />
+              </IconButton>
+            ))}
           </div>
-        </div>
-        <div className="bg-surface border border-outline rounded p-4">
-          <pre className="text-sm overflow-x-auto">
-{`<Button className="bg-purple-600 hover:bg-purple-700">
-  Custom Color
-</Button>
-
-<Button className="rounded-full px-6">
-  Round Button
-</Button>
-
-<Button className="w-full max-w-xs">
-  Full Width Button
-</Button>`}
-          </pre>
-        </div>
-      </section>
-
-      {/* Loading State */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Loading State</h2>
-        <div className="bg-surface-variant rounded-lg p-6">
-          <div className="flex flex-wrap gap-4">
-            <Button disabled>
-              <svg className="animate-spin h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-              Loading...
-            </Button>
-            <Button variant="outline" disabled>
-              <svg className="animate-spin h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-              Processing...
-            </Button>
+          <div className="flex flex-wrap items-center gap-4">
+            {['xs', 'sm', 'md', 'lg', 'xl'].map((size) => (
+              <IconButton key={size} size={size as any} variant="filled">
+                <StarsIcon />
+              </IconButton>
+            ))}
           </div>
-        </div>
-        <div className="bg-surface border border-outline rounded p-4">
-          <pre className="text-sm overflow-x-auto">
-{`<Button disabled>
-  <Spinner className="animate-spin h-4 w-4 mr-2" />
-  Loading...
-</Button>`}
-          </pre>
+          <div className="flex flex-wrap items-center gap-4">
+            {['xs', 'sm', 'md', 'lg', 'xl'].map((size) => (
+              <IconButton key={size} size={size as any} widthType="wide" variant="filled">
+                <StarsIcon />
+              </IconButton>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            {['xs', 'sm', 'md', 'lg', 'xl'].map((size) => (
+              <IconButton key={size} size={size as any} widthType="wide" shape="square" variant="filled">
+                <StarsIcon />
+              </IconButton>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            {['filled', 'tonal', 'outline', 'standard'].map((variant) => (
+              <IconButton key={variant} variant={variant as any} widthType="wide" shape="round">
+                <StarsIcon />
+              </IconButton>
+            ))}
+          </div>
         </div>
       </section>
     </div>

@@ -37,6 +37,7 @@
   --color-on-background: var(--md-sys-color-on-background);
   
   --color-surface-container: var(--md-sys-color-surface-container);
+  --color-surface-container-high: var(--md-sys-color-surface-container-high);
   --color-surface-container-highest: var(--md-sys-color-surface-container-highest);
   --color-surface-container-low: var(--md-sys-color-surface-container-low);
   --color-outline-variant: var(--md-sys-color-outline-variant);
