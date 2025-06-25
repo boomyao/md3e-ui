@@ -12,6 +12,7 @@ const navigationItems: NavigationItem[] = [
   { name: 'Button', path: '/button', category: 'MDUI' },
   { name: 'Calendar', path: '/calendar', category: 'MDUI' },
   { name: 'Checkbox', path: '/checkbox', category: 'MDUI' },
+  { name: 'Date Picker', path: '/date-picker', category: 'MDUI' },
   { name: 'Dialog', path: '/dialog', category: 'MDUI' },
   { name: 'Lists', path: '/lists', category: 'MDUI' },
   { name: 'Menu', path: '/menu', category: 'MDUI' },

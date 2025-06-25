@@ -228,7 +228,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         <div className="absolute inset-0 rounded-[inherit] focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2" />
         
         {/* Content */}
-        <div className="relative z-10 flex items-center justify-center">
+        <div className="relative flex items-center justify-center">
             <div 
               className={cn(
                 iconSizeVariants({ size }),
