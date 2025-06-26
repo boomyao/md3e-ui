@@ -4,8 +4,8 @@
 
 - label?: string
 - supportingText?: string
-- leadingIcon?: React.ReactNode
-- trailingIcon?: React.ReactNode
+- leading?: React.ReactNode
+- trailing?: React.ReactNode
 - variant?: 'filled' | 'outlined'
   - default: 'filled'
 

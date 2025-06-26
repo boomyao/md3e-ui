@@ -1,8 +1,9 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 import { TextField } from "@/components/mdui/text-field"
 import { Mail, Search, Eye, EyeOff, User, Lock } from "lucide-react"
+import { IconButton } from '@/components/mdui/icon-button'
 
 export function TextFieldDemo() {
   const [email, setEmail] = useState("")
@@ -73,7 +74,7 @@ export function TextFieldDemo() {
                 variant="filled"
                 label="Search"
                 placeholder="Search content"
-                leadingIcon={<Search className="w-4 h-4" />}
+                leading={<Search className="w-4 h-4" />}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -87,18 +88,17 @@ export function TextFieldDemo() {
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                trailingIcon={
-                  <button
-                    type="button"
+                trailing={
+                  <IconButton
+                    variant="standard"
                     onClick={togglePasswordVisibility}
-                    className="p-1 hover:bg-surface-variant rounded-full transition-colors"
                   >
                     {showPassword ? (
                       <EyeOff className="w-4 h-4" />
                     ) : (
                       <Eye className="w-4 h-4" />
                     )}
-                  </button>
+                  </IconButton>
                 }
                 supportingText="At least 8 characters"
               />
@@ -110,8 +110,8 @@ export function TextFieldDemo() {
                 variant="filled"
                 label="User Account"
                 placeholder="Enter your account"
-                leadingIcon={<User className="w-4 h-4" />}
-                trailingIcon={<Lock className="w-4 h-4" />}
+                leading={<User className="w-4 h-4" />}
+                trailing={<Lock className="w-4 h-4" />}
                 supportingText="Secure user identifier"
               />
             </div>
@@ -143,7 +143,7 @@ export function TextFieldDemo() {
                 value={validationEmail}
                 onChange={(e) => handleEmailValidation(e.target.value)}
                 aria-invalid={!isEmailValid}
-                leadingIcon={<Mail className="w-4 h-4" />}
+                leading={<Mail className="w-4 h-4" />}
                 supportingText={
                   !isEmailValid 
                     ? "Please enter a valid email address" 
@@ -179,14 +179,14 @@ export function TextFieldDemo() {
                   variant="outlined"
                   label="Email"
                   placeholder="Enter your email"
-                  leadingIcon={<Mail className="w-4 h-4" />}
+                  leading={<Mail className="w-4 h-4" />}
                   supportingText="Email address for login"
                 />
                 <TextField
                   variant="outlined"
                   label="Password"
                   placeholder="Enter your password"
-                  leadingIcon={<Lock className="w-4 h-4" />}
+                  leading={<Lock className="w-4 h-4" />}
                   supportingText="Please enter your password"
                 />
               </div>
@@ -198,7 +198,7 @@ export function TextFieldDemo() {
                 variant="filled"
                 label="Search Products"
                 placeholder="Enter keywords to search..."
-                leadingIcon={<Search className="w-4 h-4" />}
+                leading={<Search className="w-4 h-4" />}
                 supportingText="Supports fuzzy search"
               />
             </div>

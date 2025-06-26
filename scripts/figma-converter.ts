@@ -2,6 +2,8 @@
 
 import * as fs from 'fs';
 import { FigmaDataConverter, type FigmaData } from './FigmaDataConverter';
+// import { DeduplicationMiddleware } from './DeduplicationMiddleware';
+import { StructuralDeduplicationMiddleware } from './StructuralDeduplicationMiddleware';
 
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
@@ -27,6 +29,8 @@ async function main(): Promise<void> {
 
     // 转换数据
     const converter = new FigmaDataConverter(figmaData);
+    // converter.use(new DeduplicationMiddleware());
+    converter.use(new StructuralDeduplicationMiddleware());
     const result = await converter.convert();
 
     // 可选：保存到文件

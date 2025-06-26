@@ -39,6 +39,9 @@ such as: rounded-extra-small, rounded-small, rounded-medium, rounded-large, roun
 - shadow variants
 such as: shadow-elevation-0, shadow-elevation-1, shadow-elevation-2 ...
 
+- transition variants
+such as: transition-expressive-spatial-fast, transition-expressive-effects-fast ...
+
 ## Icon
 
 path: src/components/mdui/icons

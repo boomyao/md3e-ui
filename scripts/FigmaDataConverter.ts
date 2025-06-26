@@ -35,6 +35,7 @@ interface FigmaNode {
   itemSpacing?: number;
   layoutSizingHorizontal?: string;
   layoutSizingVertical?: string;
+  layoutPositioning?: string;
   primaryAxisSizingMode?: string;
   counterAxisSizingMode?: string;
   primaryAxisAlignItems?: string;
@@ -73,21 +74,25 @@ export interface FigmaData {
 }
 
 // 支持的属性值类型
-type PropertyValue = string | number | boolean | string[] | number[];
+export type PropertyValue = string | number | boolean | string[] | number[];
 
 // YAML 输出节点结构
-interface YamlNode {
+export interface YamlNode {
   name: string;
   type: string;
+  ref?: string;
   properties?: Record<string, PropertyValue>;
   children?: YamlNode[];
+  variables?: string[];
+  boundVariables?: Record<string, PropertyValue>;
 }
 
 // 中间件上下文接口
 interface MiddlewareContext {
   converter: FigmaDataConverter;
   styles: Record<string, { name: string }>;
-  currentPath: string[];
+  currentPath: FigmaNode[];
+  currentParent?: FigmaNode;
 }
 
 // 中间件接口
@@ -113,7 +118,7 @@ interface Middleware {
 class FigmaDataConverter {
   private styles: Record<string, { name: string }> = {};
   private middlewares: Middleware[] = [];
-  private currentPath: string[] = [];
+  private currentPath: FigmaNode[] = [];
 
   constructor(private data: FigmaData) {
     // 收集所有样式定义
@@ -180,7 +185,8 @@ class FigmaDataConverter {
     return {
       converter: this,
       styles: this.styles,
-      currentPath: [...this.currentPath]
+      currentPath: [...this.currentPath],
+      currentParent: this.currentPath[this.currentPath.length - 2] // 倒数第二个就是父节点
     };
   }
 
@@ -193,7 +199,7 @@ class FigmaDataConverter {
     }
 
     // 更新当前路径
-    this.currentPath.push(node.name);
+    this.currentPath.push(node);
     let processedNode = node;
     const context = this.createContext();
 
@@ -239,7 +245,7 @@ class FigmaDataConverter {
     };
 
     // 提取属性
-    let properties = this.extractProperties(processedNode);
+    let properties = this.extractProperties(processedNode, context);
 
     // 执行 afterExtractProperties 中间件
     for (const middleware of this.middlewares) {
@@ -280,7 +286,7 @@ class FigmaDataConverter {
     return finalYamlNode;
   }
 
-  private extractProperties(node: FigmaNode): Record<string, PropertyValue> {
+  private extractProperties(node: FigmaNode, context: MiddlewareContext): Record<string, PropertyValue> {
     const properties: Record<string, PropertyValue> = {};
 
     // 处理组件属性（INSTANCE 节点）
@@ -288,6 +294,9 @@ class FigmaDataConverter {
     
     // 处理布局属性
     this.addLayoutProperties(node, properties);
+    
+    // 处理绝对定位属性
+    this.addAbsolutePositionProperties(node, properties, context);
     
     // 处理样式属性
     this.addStyleProperties(node, properties);
@@ -429,6 +438,30 @@ class FigmaDataConverter {
     }
   }
 
+  private addAbsolutePositionProperties(node: FigmaNode, properties: Record<string, PropertyValue>, context: MiddlewareContext): void {
+    // 只有当 layoutPositioning 为 'ABSOLUTE' 时才计算位置
+    if (node.layoutPositioning !== 'ABSOLUTE') {
+      return;
+    }
+
+    // 获取父节点
+    const parentNode = context.currentParent;
+
+    // 检查节点和父节点是否都有 absoluteBoundingBox
+    if (!node.absoluteBoundingBox || !parentNode?.absoluteBoundingBox) {
+      return;
+    }
+
+    // 计算相对于父节点的位置
+    const left = node.absoluteBoundingBox.x - parentNode.absoluteBoundingBox.x;
+    const top = node.absoluteBoundingBox.y - parentNode.absoluteBoundingBox.y;
+
+    // 添加位置属性
+    properties.layoutPositioning = 'ABSOLUTE';
+    properties.left = left;
+    properties.top = top;
+  }
+
   private formatPaddingValue(top: number, right: number, bottom: number, left: number): number | number[] {
     // 遵循 CSS padding 简写规则
     if (top === right && right === bottom && bottom === left) {
@@ -502,14 +535,27 @@ class FigmaDataConverter {
     const indentStr = '  '.repeat(indent);
 
     for (const node of nodes) {
-      // 节点名称和类型
-      lines.push(`${indentStr}- name: "${node.name}"`);
-      lines.push(`${indentStr}  type: ${node.type}`);
+      if (node.ref) {
+        lines.push(`${indentStr}- ref:"${node.ref}"`);
+      } else {
+        lines.push(`${indentStr}- name: "${node.name}"`);
+        lines.push(`${indentStr}  type: ${node.type}`);
+      }
 
       // 属性
       if (node.properties && Object.keys(node.properties).length > 0) {
         lines.push(`${indentStr}  properties:`);
         Object.entries(node.properties).forEach(([key, value]) => {
+          const formattedValue = this.formatYamlValue(value);
+          lines.push(`${indentStr}    ${key}: ${formattedValue}`);
+        });
+      }
+
+      if (node.variables && node.variables.length > 0) {
+        lines.push(`${indentStr}  variables: ${node.variables.join(', ')}`);
+      }
+      if (node.boundVariables && Object.keys(node.boundVariables).length > 0) {
+        Object.entries(node.boundVariables).forEach(([key, value]) => {
           const formattedValue = this.formatYamlValue(value);
           lines.push(`${indentStr}    ${key}: ${formattedValue}`);
         });
