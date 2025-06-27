@@ -2,6 +2,11 @@
   --animate-dialog-scrim-in: dialog-scrim-fade-in var(--md-sys-motion-duration-medium1) var(--md-sys-motion-easing-emphasized);
   --animate-dialog-scrim-out: dialog-scrim-fade-out var(--md-sys-motion-duration-short1) var(--md-sys-motion-easing-emphasized) forwards;
   --animate-dialog-container-in: dialog-slide-down var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized), dialog-container-in-opacity var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized), dialog-container-in-height var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized);
+
+  --animate-slide-in-from-left: slide-in-from-left var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized-decelerate);
+  --animate-slide-out-to-left: slide-out-to-left var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized-accelerate) forwards;
+  --animate-slide-in-from-right: slide-in-from-right var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized-decelerate);
+  --animate-slide-out-to-right: slide-out-to-right var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized-accelerate) forwards;
 }
 
 @keyframes dialog-slide-down {
@@ -35,4 +40,24 @@
 @keyframes dialog-container-out-opacity {
   from { opacity: 1; }
   to { opacity: 0; }
+}
+
+@keyframes slide-in-from-left {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-out-to-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes slide-in-from-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-out-to-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
 }

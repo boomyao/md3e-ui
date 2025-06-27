@@ -19,6 +19,7 @@ const navigationItems: NavigationItem[] = [
   { name: 'Menu Button', path: '/menu-button', category: 'MDUI' },
   { name: 'Progress', path: '/progress', category: 'MDUI' },
   { name: 'Radio Button', path: '/radio-button', category: 'MDUI' },
+  { name: 'Sheet', path: '/sheet', category: 'MDUI' },
   { name: 'Slider', path: '/slider', category: 'MDUI' },
   { name: 'Switch', path: '/switch', category: 'MDUI' },
   { name: 'TextField', path: '/text-field', category: 'MDUI' },

@@ -1,0 +1,14 @@
+# v0.0.1
+
+## exp2
+- fix: 动画没有生效
+- feat: overlay层使用 bg-shadow opacity: 0.32
+
+## exp1
+- 使用 @radix-ui/react-dialog 承载此 SideSheet 组件
+- 支持左侧和右侧弹出，弹出时要有动画效果
+  - 尝试使用 data-state 来控制动画
+- 样式:
+  - shape: 16px
+  - 默认宽度: 320px
+  - background: surface-container-low
