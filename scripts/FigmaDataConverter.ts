@@ -11,7 +11,7 @@ interface AbsoluteBoundingBox {
   height: number;
 }
 
-interface FigmaNode {
+export interface FigmaNode {
   id: string;
   name: string;
   type: string;
@@ -539,7 +539,7 @@ class FigmaDataConverter {
         lines.push(`${indentStr}- ref:"${node.ref}"`);
       } else {
         lines.push(`${indentStr}- name: "${node.name}"`);
-        lines.push(`${indentStr}  type: ${node.type}`);
+        if (node.type) lines.push(`${indentStr}  type: ${node.type}`);
       }
 
       // 属性
