@@ -21,6 +21,7 @@ const navigationItems: NavigationItem[] = [
   { name: 'Slider', path: '/slider', category: 'MDUI' },
   { name: 'Switch', path: '/switch', category: 'MDUI' },
   { name: 'TextField', path: '/text-field', category: 'MDUI' },
+  { name: 'Timer Picker', path: '/timer-picker', category: 'MDUI' },
   { name: 'Tooltip', path: '/tooltip', category: 'MDUI' },
 ]
 

@@ -16,6 +16,7 @@ import MenuDemo from './components/demos/MenuDemo'
 import { CalendarDemo } from './components/demos/CalendarDemo'
 import MenuButtonDemo from './components/demos/MenuButtonDemo'
 import { DatePickerDemo } from './components/demos/DatePickerDemo'
+import { TimerPickerDemo } from './components/demos/TimerPickerDemo'
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/menu" element={<MenuDemo />} />
           <Route path="/menu-button" element={<MenuButtonDemo />} />
           <Route path="/date-picker" element={<DatePickerDemo />} />
+          <Route path="/timer-picker" element={<TimerPickerDemo />} />
         </Routes>
       </main>
     </div>
