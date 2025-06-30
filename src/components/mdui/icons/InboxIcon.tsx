@@ -27,11 +27,4 @@ export const InboxIcon: React.FC<InboxIconProps> = ({
 };
 
 export default InboxIcon;
-833 14.6 14.6 14.8 14H19V5H5V14H9.2C9.4 14.6 9.75833 15.0833 10.275 15.45C10.7917 15.8167 11.3667 16 12 16ZM5 19H8C8.5 19 9.09167 19 9.775 19C10.475 19 11.2167 19 12 19C12.7833 19 13.5167 19 14.2 19C14.9 19 15.5 19 16 19H19H5Z"/>
 
-
-    </svg>
-  );
-};
-
-export default InboxIcon;

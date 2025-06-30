@@ -115,3 +115,4 @@ export { SwapHorizIcon } from './SwapHorizIcon';
 export { SwapVertIcon } from './SwapVertIcon';
 export { ErrorIcon } from './ErrorIcon';
 export { KeyboardIcon } from './KeyboardIcon';
+export { FavoriteIcon } from './FavoriteIcon';

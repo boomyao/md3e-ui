@@ -7,7 +7,7 @@ const badgeVariants = cva([
   // Base styles - Container specs
   "inline-flex items-center justify-center",
   "min-h-1.5 min-w-1.5 not-[:empty]:min-h-4 not-[:empty]:min-w-4",
-  "not-[:empty]:px-1.5",
+  "not-[:empty]:px-1",
   "rounded-full",
   // Background and text colors from MD3 system specs
   "bg-error text-on-error",

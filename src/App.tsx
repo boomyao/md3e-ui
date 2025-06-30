@@ -20,6 +20,7 @@ import { TimerPickerDemo } from './components/demos/TimerPickerDemo'
 import { RadioButtonDemo } from './components/demos/RadioButtonDemo'
 import { SheetDemo } from './components/demos/SheetDemo'
 import { CardDemo } from './components/demos/CardDemo'
+import { NavigationDemo } from './components/demos/NavigationDemo'
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="/radio-button" element={<RadioButtonDemo />} />
           <Route path="/sheet" element={<SheetDemo />} />
           <Route path="/card" element={<CardDemo />} />
+          <Route path="/navigation" element={<NavigationDemo />} />
         </Routes>
       </main>
     </div>
