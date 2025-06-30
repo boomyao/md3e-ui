@@ -13,7 +13,7 @@ export function SheetDemo() {
     <div className="grid grid-cols-2 gap-2">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline">Open Left</Button>
+          <Button variant="outlined">Open Left</Button>
         </SheetTrigger>
         <SheetContent side="left">
           <SheetHeader>
@@ -40,7 +40,7 @@ export function SheetDemo() {
       </Sheet>
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline">Open Right</Button>
+          <Button variant="outlined">Open Right</Button>
         </SheetTrigger>
         <SheetContent side="right">
           <SheetHeader>

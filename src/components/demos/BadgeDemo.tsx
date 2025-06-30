@@ -18,21 +18,21 @@ export default function BadgeDemo() {
         <h3 className="text-lg font-semibold">Basic Usage</h3>
         <div className="flex items-center gap-4">
           <div className="relative">
-            <Button variant="outline" size="xs">
+            <Button variant="outlined" size="xs">
               <Mail className="h-4 w-4" />
             </Button>
             <Badge className="absolute -top-2 -right-2">3</Badge>
           </div>
           
           <div className="relative">
-            <Button variant="outline" size="xs">
+            <Button variant="outlined" size="xs">
               <Bell className="h-4 w-4" />
             </Button>
             <Badge className="absolute -top-2 -right-2">12</Badge>
           </div>
           
           <div className="relative">
-            <Button variant="outline" size="xs">
+            <Button variant="outlined" size="xs">
               <ShoppingCart className="h-4 w-4" />
             </Button>
             <Badge className="absolute -top-2 -right-2">99+</Badge>
@@ -58,14 +58,14 @@ export default function BadgeDemo() {
         <h3 className="text-lg font-semibold">Dot Badge</h3>
         <div className="flex items-center gap-4">
           <div className="relative">
-            <Button variant="outline" size="xs">
+            <Button variant="outlined" size="xs">
               <Mail className="h-4 w-4" />
             </Button>
             <Badge className="absolute -top-1 -right-1" />
           </div>
           
           <div className="relative">
-            <Button variant="outline" size="xs">
+            <Button variant="outlined" size="xs">
               <Bell className="h-4 w-4" />
             </Button>
             <Badge className="absolute -top-1 -right-1" />
@@ -113,7 +113,7 @@ export default function BadgeDemo() {
 
 // With button
 <div className="relative">
-  <Button variant="outline" size="icon">
+  <Button variant="outlined" size="icon">
     <Mail className="h-4 w-4" />
   </Button>
   <Badge className="absolute -top-2 -right-2">3</Badge>

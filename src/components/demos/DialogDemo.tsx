@@ -77,7 +77,7 @@ export function DialogDemo() {
           <div className="flex gap-4">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="outline">Delete Item</Button>
+                <Button variant="outlined">Delete Item</Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
@@ -104,7 +104,7 @@ export function DialogDemo() {
           <pre className="text-sm overflow-x-auto">
 {`<Dialog>
   <DialogTrigger asChild>
-    <Button variant="outline">Delete Item</Button>
+    <Button variant="outlined">Delete Item</Button>
   </DialogTrigger>
   <DialogContent>
     <DialogHeader>

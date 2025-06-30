@@ -34,7 +34,7 @@ const buttonVariants = cva(
           "disabled:bg-on-surface disabled:text-on-surface disabled:opacity-[0.1]",
           "disabled:text-opacity-[0.38]",
         ],
-        outline: [
+        outlined: [
           "bg-transparent text-on-surface-variant border border-outline-variant shadow-elevation-0",
           "before:bg-outline-variant",
           "disabled:bg-transparent disabled:text-on-surface disabled:border-on-surface disabled:opacity-[0.1]",

@@ -33,7 +33,7 @@ export function ButtonDemo() {
           <div className="flex flex-wrap gap-4">
             <Button variant="filled">Filled</Button>
             <Button variant="tonal">Tonal</Button>
-            <Button variant="outline">Outline</Button>
+            <Button variant="outlined">Outline</Button>
             <Button variant="elevated">Elevated</Button>
             <Button variant="text">Text</Button>
             <Button shape="round">Round</Button>
@@ -62,7 +62,7 @@ export function ButtonDemo() {
         <div className="bg-surface-variant rounded-lg p-6">
           <div className="flex flex-wrap gap-4">
             <Button disabled>Disabled Button</Button>
-            <Button variant="outline" disabled>Disabled Outline</Button>
+            <Button variant="outlined" disabled>Disabled Outline</Button>
             <Button variant="elevated" disabled>Disabled Secondary</Button>
             <Button variant="text" disabled>Disabled Ghost</Button>
           </div>
@@ -80,7 +80,7 @@ export function ButtonDemo() {
               </svg>
               Add Project
             </Button>
-            <Button variant="outline">
+            <Button variant="outlined">
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 000-6.364 4.5 4.5 0 00-6.364 0L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>

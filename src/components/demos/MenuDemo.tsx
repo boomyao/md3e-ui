@@ -54,7 +54,7 @@ export default function MenuDemo() {
           <h3 className="text-lg font-semibold text-on-surface">基本菜单</h3>
           <Menu>
             <MenuTrigger asChild>
-              <Button variant="outline">打开菜单</Button>
+              <Button variant="outlined">打开菜单</Button>
             </MenuTrigger>
             <MenuContent className="w-56">
               <MenuLabel>我的账户</MenuLabel>
@@ -109,7 +109,7 @@ export default function MenuDemo() {
           <h3 className="text-lg font-semibold text-on-surface">复选框菜单</h3>
           <Menu>
             <MenuTrigger asChild>
-              <Button variant="outline">显示选项</Button>
+              <Button variant="outlined">显示选项</Button>
             </MenuTrigger>
             <MenuContent className="w-56">
               <MenuLabel>外观</MenuLabel>
@@ -144,7 +144,7 @@ export default function MenuDemo() {
           <h3 className="text-lg font-semibold text-on-surface">单选菜单</h3>
           <Menu>
             <MenuTrigger asChild>
-              <Button variant="outline">选择人员</Button>
+              <Button variant="outlined">选择人员</Button>
             </MenuTrigger>
             <MenuContent className="w-56">
               <MenuLabel>人员</MenuLabel>
@@ -164,7 +164,7 @@ export default function MenuDemo() {
           <h3 className="text-lg font-semibold text-on-surface">子菜单</h3>
           <Menu>
             <MenuTrigger asChild>
-              <Button variant="outline">更多选项</Button>
+              <Button variant="outlined">更多选项</Button>
             </MenuTrigger>
             <MenuContent className="w-56">
               <MenuItem>
