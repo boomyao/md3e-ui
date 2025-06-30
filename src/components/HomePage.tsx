@@ -39,6 +39,12 @@ export function HomePage() {
           path="/ui-button"
           icon="🔘"
         />
+        <ComponentCard
+          title="Stack Card"
+          description="堆叠卡片组件，用于展示丰富的图文信息"
+          path="/stack-card"
+          icon="🃏"
+        />
       </div>
 
       <div className="bg-surface-variant rounded-lg p-8 text-center">
