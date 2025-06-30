@@ -19,6 +19,7 @@ import { DatePickerDemo } from './components/demos/DatePickerDemo'
 import { TimerPickerDemo } from './components/demos/TimerPickerDemo'
 import { RadioButtonDemo } from './components/demos/RadioButtonDemo'
 import { SheetDemo } from './components/demos/SheetDemo'
+import { CardDemo } from './components/demos/CardDemo'
 
 function App() {
 
@@ -48,7 +49,7 @@ function App() {
           <Route path="/timer-picker" element={<TimerPickerDemo />} />
           <Route path="/radio-button" element={<RadioButtonDemo />} />
           <Route path="/sheet" element={<SheetDemo />} />
-          {/* 其他路由可以继续添加 */}
+          <Route path="/card" element={<CardDemo />} />
         </Routes>
       </main>
     </div>
