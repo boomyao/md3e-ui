@@ -15,13 +15,13 @@ The goal of this project is to create a set of components that are consistent wi
 - Almost all the components are base on the @radix-ui, but you should deep consider whether to use the @radix-ui or not.
 - If user provide the props, you should strictly follow the props, and don't add other props.
 - Use styles whenever possible instead of using JavaScript code.
-- Classnames are declared by class-variance-authority, and separated from the component.
+- Classnames are declared by tailwind-variants, and separated from the component.
 - If the component has states, try to use the tailwindcss variants, such as hovered - hover, focused - focus-visible, pressed - active, error - user-invalid etc. And use the data-*, not,has, [svg] etc. to implement the state and interaction of the component.
 
 ## Utils
 
 - tailwindcss: installed and configured
-- class-variance-authority: installed
+- tailwind-variants: installed
 - cn
   - path: src/lib/utils.ts
 
@@ -70,8 +70,7 @@ if no variant, generate classnames on the component.
 
 ``` tsx
 // cva code, Recommend to more code.
-const xxxVariants = cva(
-  baseClassNames,
+const xxxVariants = tv(
   ...
 )
 
@@ -81,3 +80,7 @@ export {
   xxx,
 }
 ```
+
+## Tips
+
+If the design exists the variant's name: `style`, you should use the `variant` instead of `style`, such as `variant: "Outlined"`.
